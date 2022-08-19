@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.daftarjual.DaftarJualFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_gambarPenjual"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="70dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_namaPenjual"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/nunitobold"
+                android:text="Nama penjual"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_gambarPenjual"
+                app:layout_constraintTop_toTopOf="@+id/iv_gambarPenjual" />
+
+            <TextView
+                android:id="@+id/tv_kotaPenjual"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/nunitoregular"
+                android:text="Kota penjual"
+                android:textSize="14sp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_namaPenjual"
+                app:layout_constraintTop_toBottomOf="@+id/tv_namaPenjual" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/edit_acc"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_gambarPenjual"
+                app:layout_constraintEnd_toEndOf="@+id/iv_gambarPenjual"
+                app:layout_constraintStart_toStartOf="@+id/iv_gambarPenjual"
+                app:layout_constraintTop_toTopOf="@+id/iv_gambarPenjual" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="415dp"
+                android:layout_height="13dp"
+                android:background="#f2f2f2"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_gambarPenjual" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.github.captain_miao.optroundcardview.OptRoundCardView
+                        android:id="@+id/btn_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="20dp"
+                        app:optRoundCardElevation="0dp"
+                        app:optRoundCardCornerRadius="30dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/card_category"
+                            android:background="@drawable/bg_category_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tv_categoryProduct"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:fontFamily="@font/nunitoregular"
+                                android:text="Produk"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+                    <com.github.captain_miao.optroundcardview.OptRoundCardView
+                        android:id="@+id/btn_diminati"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        app:optRoundCardElevation="0dp"
+                        app:optRoundCardCornerRadius="30dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/card_category2"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/bg_category_home"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tv_categoryDiminati"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:fontFamily="@font/nunitoregular"
+                                android:text="Diminati"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+                    <com.github.captain_miao.optroundcardview.OptRoundCardView
+                        android:id="@+id/btn_ditolak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        app:optRoundCardElevation="0dp"
+                        app:optRoundCardCornerRadius="30dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/card_category3"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/bg_category_home"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tv_categoryDitolak"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:fontFamily="@font/nunitoregular"
+                                android:text="Ditolak"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+                    <com.github.captain_miao.optroundcardview.OptRoundCardView
+                        android:id="@+id/btn_diterima"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        app:optRoundCardElevation="0dp"
+                        app:optRoundCardCornerRadius="30dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/card_category4"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/bg_category_home"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tv_categoryDiterima"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:fontFamily="@font/nunitoregular"
+                                android:text="Diterima"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+                    <com.github.captain_miao.optroundcardview.OptRoundCardView
+                        android:id="@+id/btn_terjual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
+                        app:optRoundCardElevation="0dp"
+                        app:optRoundCardCornerRadius="30dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/card_category5"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/bg_category_home"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tv_categoryTerjual"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:fontFamily="@font/nunitoregular"
+                                android:text="Terjual"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_productDaftarJual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+                app:spanCount="2"
+                tools:listitem="@layout/list_product_home" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_diminatiDaftarJual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                tools:listitem="@layout/list_item_diminati"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_ditolakDaftarJual"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                tools:listitem="@layout/list_item_diminati"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_diterimaDaftarJual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                tools:listitem="@layout/list_item_diminati"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar Jual Saya"
+        android:fontFamily="@font/nunitobold"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

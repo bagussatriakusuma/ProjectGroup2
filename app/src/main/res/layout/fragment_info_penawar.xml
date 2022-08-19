@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.daftarjual.infopenawar.InfoPenawarFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:foreground="@drawable/bg_edittext"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="p">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_fi_arrow_left"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunitobold"
+        android:text="Info Penawar"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_Back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/card_Back" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/nunitosemibold"
+        android:text="Hey, ada yang menawar produk anda. Silahkan terima tawaran jika anda setuju dan hubungi penawar melalu whatsapp!"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_Back" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="415dp"
+        android:layout_height="13dp"
+        android:background="#f2f2f2"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_gambarPenawar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/kena"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/tv_namaPenawar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunitobold"
+        android:text="Nama penawar"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="13dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_gambarPenawar"
+        app:layout_constraintTop_toTopOf="@+id/iv_gambarPenawar" />
+
+    <TextView
+        android:id="@+id/tv_kotaPenawar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/nunitoregular"
+        android:text="Kota penawar"
+        android:textSize="14sp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_namaPenawar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_namaPenawar" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="415dp"
+        android:layout_height="13dp"
+        android:background="#f2f2f2"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kotaPenawar" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/nunitobold"
+        android:text="Produk yang ditawar"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_productImageTawar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kena"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:riv_corner_radius="10dp" />
+
+    <TextView
+        android:id="@+id/tv_productNameTawar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunitobold"
+        android:text="Nama produk"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_productImageTawar"
+        app:layout_constraintTop_toTopOf="@+id/iv_productImageTawar" />
+
+    <TextView
+        android:id="@+id/tv_productDateTawar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunitoregular"
+        android:text="21 Jul, 05:37"
+        android:textSize="12sp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/tv_productPriceTawar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/nunitoregular"
+        android:text="Rp 250.000"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_productImageTawar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_productNameTawar" />
+
+    <TextView
+        android:id="@+id/tv_productPriceDitawar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/nunitoregular"
+        android:text="Ditawar Rp 200.000"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_productImageTawar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_productPriceTawar" />
+
+    <LinearLayout
+        android:id="@+id/group_btnTolakTerima"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btn_tolakTawar"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="@color/white"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitobold"
+                android:text="Tolak"
+                android:textColor="#999999"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_tolakTawar"
+                app:layout_constraintEnd_toEndOf="@+id/btn_tolakTawar"
+                app:layout_constraintStart_toStartOf="@+id/btn_tolakTawar"
+                app:layout_constraintTop_toTopOf="@+id/btn_tolakTawar" />
+
+            <Button
+                android:id="@+id/btn_terimaTawar"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_button"
+                android:fontFamily="@font/nunitobold"
+                android:text="Terima"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_tolakTawar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/group_btnStatusHubungi"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="invisible"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btn_StatusTawar"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="@color/white"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitobold"
+                android:text="Status"
+                android:textColor="#999999"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_StatusTawar"
+                app:layout_constraintEnd_toEndOf="@+id/btn_StatusTawar"
+                app:layout_constraintStart_toStartOf="@+id/btn_StatusTawar"
+                app:layout_constraintTop_toTopOf="@+id/btn_StatusTawar" />
+
+            <Button
+                android:id="@+id/btn_HubungiTawar"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_button"
+                android:fontFamily="@font/nunitobold"
+                android:text="Hubungi"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_StatusTawar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

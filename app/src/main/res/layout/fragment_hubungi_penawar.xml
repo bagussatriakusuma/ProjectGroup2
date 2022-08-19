@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.daftarjual.infopenawar.HubungiPenawarFragment">
+
+    <ImageView
+        android:id="@+id/iv_gambarPembeli"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kena"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_namaPembeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nama pembeli"
+        app:layout_constraintStart_toEndOf="@+id/iv_gambarPembeli"
+        app:layout_constraintTop_toTopOf="@+id/iv_gambarPembeli" />
+
+    <TextView
+        android:id="@+id/tv_kotaPembeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kota pembeli"
+        app:layout_constraintStart_toEndOf="@+id/iv_gambarPembeli"
+        app:layout_constraintTop_toBottomOf="@+id/tv_namaPembeli" />
+
+    <ImageView
+        android:id="@+id/iv_gambarProduct"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kena"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_gambarPembeli" />
+
+    <TextView
+        android:id="@+id/tv_namaProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nama product"
+        app:layout_constraintStart_toEndOf="@+id/iv_gambarPembeli"
+        app:layout_constraintTop_toTopOf="@+id/iv_gambarProduct" />
+
+    <TextView
+        android:id="@+id/tv_hargaProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="rp 200.000"
+        app:layout_constraintStart_toStartOf="@+id/tv_namaProduct"
+        app:layout_constraintTop_toBottomOf="@+id/tv_namaProduct" />
+
+    <TextView
+        android:id="@+id/tv_hargaDitawarProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ditawar rp 200.000"
+        app:layout_constraintStart_toStartOf="@+id/tv_namaProduct"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hargaProduct" />
+
+    <Button
+        android:id="@+id/btn_hubungiPembeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hubungi pembeli"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_gambarProduct" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

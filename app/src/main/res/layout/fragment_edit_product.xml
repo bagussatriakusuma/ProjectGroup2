@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.main.daftarjual.editproduct.EditProductFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:foreground="@drawable/bg_edittext"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="p">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_fi_arrow_left"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitobold"
+            android:text="Edit Produk"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/card_Back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/card_Back" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_editPhotoProduct"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/placeholder_product"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_Back" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_kategori"
+            style="@style/LoginTextInputLayoutStyle"
+            android:theme="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Kategori"
+            app:hintTextColor="@color/color_main"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:errorEnabled="true"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_editPhotoProduct">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_editKategoriProduct"
+                android:fontFamily="@font/nunitosemibold"
+                android:textSize="16sp"
+                android:editable="false"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                tools:ignore="Deprecated" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_namaProduct"
+            style="@style/LoginTextInputLayoutStyle"
+            android:theme="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Nama produk"
+            app:hintTextColor="@color/color_main"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_kategori">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_editNamaProduct"
+                android:fontFamily="@font/nunitosemibold"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_hargaProduct"
+            style="@style/LoginTextInputLayoutStyle"
+            android:theme="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Harga"
+            app:hintTextColor="@color/color_main"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_namaProduct">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_editHargaProduct"
+                android:fontFamily="@font/nunitosemibold"
+                android:textSize="16sp"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_deskripsiProduct"
+            style="@style/LoginTextInputLayoutStyle"
+            android:theme="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Deskripsi"
+            app:hintTextColor="@color/color_main"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_hargaProduct">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_editDeskripsiProduct"
+                android:fontFamily="@font/nunitosemibold"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_lokasiProduct"
+            style="@style/LoginTextInputLayoutStyle"
+            android:theme="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Lokasi"
+            app:hintTextColor="@color/color_main"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_deskripsiProduct">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_editLokasiProduct"
+                android:fontFamily="@font/nunitosemibold"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_editProduct"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_button"
+            android:fontFamily="@font/nunitobold"
+            android:text="Simpan"
+            android:textAllCaps="false"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_hapusProduct" />
+
+        <ImageButton
+            android:id="@+id/btn_hapusProduct"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_button"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitobold"
+            android:text="Hapus"
+            android:textColor="#999999"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_hapusProduct"
+            app:layout_constraintEnd_toEndOf="@+id/btn_hapusProduct"
+            app:layout_constraintStart_toStartOf="@+id/btn_hapusProduct"
+            app:layout_constraintTop_toTopOf="@+id/btn_hapusProduct" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
